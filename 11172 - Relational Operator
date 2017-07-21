@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+  int n,a,b;
+   int i=0;
+   cin>>n;
+   while(i<n){
+        cin>>a>>b;
+    if(a<b){
+        cout<<"<"<<endl;
+    }
+    if(a>b){
+      cout<<">"<<endl;
+    }
+    if(a==b){
+      cout<<"="<<endl;
+    }
+    i++;
+   }
+ return 0;
+}
