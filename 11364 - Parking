@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main(){
+
+  int n,a,b,p=0;
+  cin>>n;
+
+   while(p<n){
+        scanf("%d",&a);
+        vector<int> v;
+        for(int i=0;i<a;i++){
+           scanf("%d",&b);
+           v.push_back(b);
+            }
+         sort(v.begin(),v.end());
+
+    int s=0,sum=0;
+    while(s<a-1){
+         sum+=abs(v[s]-v[s+1]);
+        s++;
+    }
+   sum+=abs(v[0]-v[a-1]);
+  cout<<sum<<endl;
+    p++;
+   }
+
+
+
+ return 0;
+}
