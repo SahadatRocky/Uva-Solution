@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    int a,n;
+    cin >> a;
+    int i = 0;
+     while(i<a){
+        cin >> n;
+        int res= (((((((n*567)/9)+7492)*235)/47)-498)/10)%10;
+        cout << abs(res) << endl;
+         i++;
+    }
+    return 0;
+}
+
