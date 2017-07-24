@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+int n;
+cin>>n;
+int i=0,t=1;
+while(i<n){
+    string s[10];
+    int l[10];
+    int max=0;
+   for(int j=0;j<10;j++){
+       cin>>s[j]>>l[j];
+       if(l[j]>max)
+            max=l[j];
+       }
+      cout<<"Case #"<<t<<":"<<endl;
+        for(int j=0;j<10;j++){
+            if(max==l[j])
+            cout<<s[j]<<endl;
+       }
+       t++;
+
+  i++;
+}
+
+  return 0;
+}
