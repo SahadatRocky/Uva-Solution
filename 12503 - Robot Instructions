@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+     int n;
+     cin>>n;
+
+     while(n--){
+            int m;
+     cin>>m;
+     vector<int >v;
+     int pos=0;
+     while(m--){
+            string s;
+         cin>>s;
+         if(s=="LEFT"){
+            pos--;
+            v.push_back(-1);
+         }
+         else if(s=="RIGHT")
+         {
+             pos++;
+             v.push_back(1);
+         }
+         else{
+            int i;
+            cin>>s>>i;
+            pos=pos+v[i-1];
+            v.push_back(v[i-1]);
+         }
+     }
+      cout<<pos<<endl;
+
+     }
+
+ return 0;
+}
