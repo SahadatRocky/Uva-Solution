@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int sum(int n){
+
+ int digit,res=0;
+
+ while(n>0){
+
+      digit=n%10;
+     res+=digit;
+     n=n/10;
+
+ }
+ return res;
+
+}
+
+
+int  main(){
+
+  int n;
+
+   while(cin>>n && n!=0){
+  int a;
+    a=sum(sum(sum(n)));
+    cout<<a<<endl;
+
+   }
+ return 0;
+}
