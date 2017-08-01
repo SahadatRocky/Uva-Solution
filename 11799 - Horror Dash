@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+ vector <int > v;
+int main(){
+
+   int t,n,k;
+
+   cin>>t;
+   for(int i=1;i<=t;i++){
+      cin>>n;
+       int _max=0;
+        for(int j=0;j<n;j++){
+            cin>>k;
+              if(k>_max)
+                _max=k;
+        }
+        cout<<"Case "<<i<<": "<<_max<<endl;
+   }
+
+
+
+
+ return 0;
+}
