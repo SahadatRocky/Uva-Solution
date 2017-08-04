@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#include<stdio.h>
+int main()
+{
+    long members,budget,hotels,weeks,price,cost=15000000,p,j,room;
+    while(scanf("%ld%ld%ld%ld",&members,&budget,&hotels,&weeks)==4)
+    {
+        while(hotels--)
+        {
+            scanf("%ld",&price);
+            for(j=0;j<weeks;j++)
+            {
+                scanf("%ld",&room);
+                p=0;
+                if(room>=members)
+                {
+                    p=price*members;
+                    if(cost>p)
+                    cost=p;
+                }
+            }
+        }
+            (cost>budget)? printf("stay home\n") : printf("%ld\n",cost);
+            cost=15000000;
+        }
+
+    return 0;
+}
