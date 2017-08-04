@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    int n,u,a;
+
+     cin>>n;
+     int j=1;
+    while(j<=n){
+        int high_jump=0,low_jump=0;
+       vector<int>v;
+        cin>>a;
+        for(int i=0;i<a;i++){
+                cin>>u;
+               v.push_back(u);
+            }
+
+         int len=v.size();
+        for(int i=0;i<len-1;i++){
+
+                if(v[i]==v[i+1]){
+                     continue;
+                }
+                else if(v[i]< v[i+1]){
+                  high_jump++;
+               }
+               else{
+                   low_jump++;
+
+               }
+            }
+
+            cout<<"Case "<<j<<": "<<high_jump<<" "<<low_jump<<endl;
+         j++;
+       v.clear();
+    }
+ return 0;
+}
