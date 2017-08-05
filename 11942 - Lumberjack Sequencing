@@ -1,0 +1,61 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int a[100],i,n,j,k,c,d;
+    cin>>n;
+    cout<<"Lumberjacks:"<<endl;
+    i=1;
+    while(i<=n)
+    {
+        c=0;
+        d=0;
+       for(j=1;j<=10;j++)
+       {
+           cin>>a[j];
+       }
+       int u=a[1];
+       int v=a[10];
+
+       if(u<v)
+       {
+       for(k=1;k<=9;k++)
+         {
+           if(a[k]<a[k+1])
+              {
+               c=1;
+              }
+           else
+             {
+               c=0;
+               break;
+             }
+          }
+       }
+       else if(u>v)
+       {
+       for(k=1;k<=9;k++)
+       {
+           if(a[k]>a[k+1])
+           {
+               d=1;
+           }
+           else
+           {
+               d=0;
+               break;
+           }
+         }
+       }
+       if(c==1 || d==1)
+       {
+           cout<<"Ordered"<<endl;
+       }
+       else
+       {
+           cout<<"Unordered"<<endl;
+       }
+         i++;
+    }
+    return 0;
+}
