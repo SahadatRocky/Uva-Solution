@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int T, N, num, mile, juice;
+    cin>>T;
+    for (int i = 1; i <= T; i++)
+    {
+         cin>>N;
+        mile = juice = 0;
+        while (N--)
+        {
+            cin>>num;
+            mile += (num / 30) * 10 + 10;
+            juice += (num / 60) * 15 + 15;
+        }
+        cout<<"Case "<<i<<": ";
+
+        if (mile < juice)
+            cout<<"Mile "<<mile<<endl;
+        else if (mile == juice)
+            cout<<"Mile ";
+
+        if (juice <= mile)
+            cout<<"Juice "<<juice<<endl;
+    }
+    return 0;
+}
