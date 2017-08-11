@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int B,N,bank[20];
+     int d,c,v;
+    while(scanf("%d %d",&B,&N)){
+        if(B==0 && N==0)
+          break;
+        for(int i=0;i<B;i++){
+              cin>>bank[i];
+       }
+       while(N--){
+
+            cin>>d>>c>>v;
+           bank[d-1]-=v;
+           bank[c-1]+=v;
+       }
+       int flag=1;
+       for(int i=0;i<B;i++){
+          if(bank[i]<0)
+            flag=0;
+       }
+       if(flag==1)
+        cout<<"S"<<endl;
+       else
+        cout<<"N"<<endl;
+
+    }
+
+ return 0;
+}
