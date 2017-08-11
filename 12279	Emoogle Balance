@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int N;
+    int cnt=1;
+    while(scanf("%d",&N)){
+        if(N==0)
+            break;
+        int a,sum=0;
+        for(int i=0;i<N;i++){
+                cin>>a;
+                if(a>0)
+                    sum++;
+                else
+                    sum--;
+
+        }
+         cout<<"Case "<<cnt++<<": "<<sum<<endl;
+    }
+
+
+return 0;
+}
