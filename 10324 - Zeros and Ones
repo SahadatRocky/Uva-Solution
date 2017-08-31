@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    char s[1000001];
+   
+    int l,n,a,b;
+    int t= 1;
+    int flag;
+    while(scanf("%s",s)==1)
+    {
+        l = strlen(s);
+        if(l==0)
+            break;
+        cin>>n;
+        cout<<"Case "<<t<<":"<<endl;
+        while(n--)
+        {
+            flag = 0;
+            cin>>a>>b;
+            if(a>b)
+                swap(a,b);
+            for(int j=a;j<b;j++)
+            {
+                if(s[a]!=s[j+1])
+                flag = 1;
+            }
+
+            if(flag == 0)
+               cout<<"Yes"<<endl;
+            else
+             cout<<"No"<<endl;
+        }
+        t++;
+    }
+    return 0;
+}
