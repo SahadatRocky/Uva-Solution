@@ -1,0 +1,68 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+
+    
+
+    int n;
+
+    int set=1;
+
+
+    while(scanf("%d",&n) && n){
+
+           
+
+           vector <int> v;
+
+           int brick;
+
+           int m=0;
+
+           int moves=0;
+
+           
+
+           for(int i=0;i<n;i++){
+
+                 int brick;
+
+                 scanf("%d",&brick);
+
+                 m+=brick;
+
+                 v.push_back(brick);
+
+           }
+
+           m/=n;
+
+           for(int i=0;i<n;i++){
+
+                 if(v[i]>m){
+
+                     moves += v[i]- m; 
+
+                 } 
+
+           } 
+
+           printf("Set #%d\n", set);
+
+           printf("The minimum number of moves is %d.\n\n", moves);
+
+           set++;
+
+           
+
+    }
+
+    
+
+    
+
+ return 0; 
+
+}
+
