@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+     string s;
+     list<char> text;
+     list<char>::iterator itr;
+     
+     while(getline(cin,s)){
+     	text.clear();
+     	
+     	itr=text.begin();
+     	for(int i=0;i<s.size();i++){
+     		  
+     		  if(s[i]=='[')
+     		    itr=text.begin();
+     		    
+     		    if(s[i]==']')
+     		    itr=text.end();
+     		   
+     		    if(s[i]!='[' && s[i]!=']')
+     		    text.insert(itr,s[i]);
+     		    
+     	  	}
+     	  	
+for(itr=text.begin();itr!=text.end();itr++){
+	    cout<<*itr;
+	       }
+	     cout<<endl;
+	          
+     	}
+     
+     
+return 0;
+}
