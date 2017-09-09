@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    vector<int> v;
+    map<int,int> map1;
+    map<int,int>::iterator itr;
+    
+   map1.clear();
+    
+    while(cin>>n){
+    	
+    	itr=map1.find(n);
+    	if(itr==map1.end()){
+    		
+    		v.push_back(n);
+    	    	  map1[n]=1;
+    	    }
+    	    else{
+    	    	    (itr->second)++;
+    	    	}
+    	
+    	}
+     
+     for(int i=0;i<v.size();i++){
+     	cout<<v[i]<<" "<<map1[v[i]]<<endl;
+     	
+     	
+     	}
+     
+
+return 0;
+}
