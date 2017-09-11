@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+
+	int tc;
+
+	cin >> tc;
+   map<string,int> mp;
+	for (int d=1; d<=tc; d++){
+
+		mp.clear();
+
+		int n;
+
+		cin >> n;
+
+		for(int k=0; k<n; k++){
+
+			string name;
+
+			int duration;
+
+			cin >> name >> duration;
+
+			mp.insert(pair<string,int>(name,duration));
+
+		}
+		
+		string name;
+		int D;
+		cin>>D>>name;
+		map<string,int>::iterator itr;
+		
+		itr=mp.find(name);
+		
+		cout<<"Case "<<d<<": ";
+		
+		if(itr==mp.end() || itr->second >(D+5)){
+cout<<"Do your own homework!"<<endl;
+			
+			}
+			else if(itr->second <= D){
+				cout<<"Yesss"<<endl;
+				}
+				else if(itr->second <=(D+5)){
+					   cout<<"Late"<<endl;
+					}
+}	
+return 0;
+}
