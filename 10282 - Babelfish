@@ -1,0 +1,61 @@
+#include<cstdio>
+
+#include<iostream>
+
+#include<map>
+
+#include<string>
+
+#include<iterator>
+
+#include <sstream>
+
+using namespace std;
+
+
+int main(){
+
+
+	string in,in2,k;
+	
+
+	map <string , string> out;
+
+	map <string , string> :: iterator it;
+
+   string t;
+  
+  stringstream ss;
+     
+	while(getline(cin,t)  && t.size()){
+		
+		ss.clear();
+		ss<<t;
+
+		ss>>in;
+      ss>>in2;
+	out.insert(pair<string,string>(in2,in));
+
+	}
+
+	while(getline(cin , k)){
+
+		
+
+		it=out.find(k);
+		
+     if(it !=out.end()){
+				cout << it->second << endl;
+
+			}
+
+			else {
+
+				cout <<"eh"<< endl;
+				}
+		
+	  	}
+   
+	return 0;
+
+}
