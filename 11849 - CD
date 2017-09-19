@@ -1,0 +1,36 @@
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+
+int main(){
+
+	    int n,m;
+while( scanf("%d %d",&n,&m) && (n!=0 && m!=0) ){
+	    	int c=0;
+	    	    	set<int>s;
+	    	    	while(n--){
+	    	    	   int v;
+	    	    	   cin>>v;
+	    	    	   s.insert(v); 
+	    	    	   }
+	    	    	   
+	    	    	  while(m--){
+	    	    	  	   int k;   
+	    	    	  	   cin>>k;
+	    	    	  	   set<int> :: iterator it;
+	    	    	  	   it=s.find(k);
+	    	    	  	   if(it!=s.end()){
+	    	    	  	      c++;
+	    	    	  	    }
+	    	    	  	}
+	    	    	   cout<<c<<endl;
+	    	}
+
+	return 0;
+
+}
+
+
+
